@@ -24,12 +24,9 @@
         
         
         &lt;p&gt;1.删除所有隐藏.DS_store文件，打开命令行窗口&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sudo find / -name &amp;quot;.DS_Store&amp;quot; -depth -exec rm {} \;&lt;/code&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;code&gt;sudo find / -name &amp;quot;.DS_Store&amp;quot; -depth -exec rm {} \; &lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;2.设置不再生成选项, 执行如下命令&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;defaults write com.apple.desktopservices DSDontWriteNetworkStores true&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;defaults write com.apple.desktopservices DSDontWriteNetworkStores true &lt;/code&gt;&lt;/p&gt;
 
       </description>
     </item>
