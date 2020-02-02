@@ -1,0 +1,52 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web开发笔记 – Share</title>
+    <link>/notes/share/</link>
+    <description>Recent content in Share on web开发笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 02 Feb 2020 11:20:43 +0800</lastBuildDate>
+    
+	  <atom:link href="/notes/share/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Notes: Mtproxy</title>
+      <link>/notes/share/mtproxy/</link>
+      <pubDate>Sun, 02 Feb 2020 11:20:20 +0800</pubDate>
+      
+      <guid>/notes/share/mtproxy/</guid>
+      <description>
+        
+        
+        &lt;pre&gt;&lt;code&gt;MTProxy
+server = tlsp.wanderinge.xyz
+port = 8443
+secret = 7hjFmlKvp/O7fd5M019iTzl3d3cubWljcm9zb2Z0LmNvbQ
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;pre&gt;&lt;code&gt;MTProxy
+server = 47.56.8.21
+port = 443
+secret = 7ozH8800Tv1l3xRCGACAP6FpdHVuZXMuYXBwbGUuY29t
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;pre&gt;&lt;code&gt;MTProxy
+server = tlsp.flysocksrockert.icu
+port = 8443
+secret = 7ukbfmy6g2sSpi12r1yz7Gh3d3cuYW1hem9uLmNvbQ
+&lt;/code&gt;&lt;/pre&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
