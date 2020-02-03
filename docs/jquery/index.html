@@ -449,6 +449,14 @@ if (!doNotTrack) {
         <li><a href="#鼠标事件">鼠标事件</a></li>
       </ul>
     </li>
+    <li><a href="#动画">动画</a>
+      <ul>
+        <li><a href="#循环和查找位置">循环和查找位置</a></li>
+        <li><a href="#添加自定义属性">添加自定义属性</a></li>
+        <li><a href="#封装自定义插件">封装自定义插件</a></li>
+        <li><a href="#jquery-ajax">jQuery Ajax</a></li>
+      </ul>
+    </li>
     <li><a href="#总结">总结</a></li>
   </ul>
 </nav>
@@ -601,12 +609,14 @@ jQuery中一切都是用函数来解决问题  没有属性。</p>
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;ul&gt;li:only&#39;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//获取ul里只有唯一一个li的元素
 </span></code></pre></div><p>选择器例子：</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8f5902;font-style:italic">//选择包含&#34;提交&#34;二字的按钮，变为绿色按钮
-</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;button:contains(提交)&#39;</span><span style="color:#000;font-weight:bold">)</span>
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;button:contains(提交)&#39;</span><span style="color:#000;font-weight:bold">)</span>
   <span style="color:#000;font-weight:bold">.</span><span style="color:#000">css</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;background-color&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#4e9a06">&#39;lightgreen&#39;</span><span style="color:#000;font-weight:bold">)</span>
-  <span style="color:#8f5902;font-style:italic">//选中包含.close按钮的.alert元素，让它们变为红色的警告框
-</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;.alert:has(.close)&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">css</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;background-color&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;pink&#39;</span><span style="color:#000;font-weight:bold">)</span>
-  <span style="color:#8f5902;font-style:italic">//选中不包含.close按钮的.alert元素，让它们变为绿色的警告框
-</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;.alert:not(:has(.close))&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">css</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;background-color&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;lightgreen&#39;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#8f5902;font-style:italic">//选中包含.close按钮的.alert元素，让它们变为红色的警告框
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;.alert:has(.close)&#39;</span><span style="color:#000;font-weight:bold">)</span>
+  <span style="color:#000;font-weight:bold">.</span><span style="color:#000">css</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;background-color&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;pink&#39;</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#8f5902;font-style:italic">//选中不包含.close按钮的.alert元素，让它们变为绿色的警告框
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;.alert:not(:has(.close))&#39;</span><span style="color:#000;font-weight:bold">)</span>
+  <span style="color:#000;font-weight:bold">.</span><span style="color:#000">css</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;background-color&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;lightgreen&#39;</span><span style="color:#000;font-weight:bold">)</span>
 </code></pre></div><h3 id="可见性过滤">可见性过滤</h3>
 <ol>
 <li>:visible 选择所有可见的元素  <code>$('.container&gt;:visible')</code></li>
@@ -616,6 +626,7 @@ jQuery中一切都是用函数来解决问题  没有属性。</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;div&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">parent</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//父元素
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;div&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">children</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;选择器&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#000;font-weight:bold">)</span>  <span style="color:#8f5902;font-style:italic">//所有子元素 只能是直接子元素
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;div&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">find</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;选择器&#34;</span><span style="color:#000;font-weight:bold">)</span>  <span style="color:#8f5902;font-style:italic">//在所有子元素里查找选择器
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;div&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">first</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//获取集合中的第一个元素
 </span><span style="color:#8f5902;font-style:italic"></span>
 <span style="color:#8f5902;font-style:italic">//兄弟关系
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;div&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">next</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//下一个兄弟
@@ -690,10 +701,10 @@ jQuery中一切都是用函数来解决问题  没有属性。</p>
 </span><span style="color:#8f5902;font-style:italic"></span>
 <span style="color:#8f5902;font-style:italic">//以上5个元素都有一个to的函数 例如 方向相反。
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;p&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">appendTO</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$父元素</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//在父元素末尾插入p元素
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;p&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">preppend</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$父元素</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//在父元素下开头增加p元素
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;p&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">before</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$现有元素</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//在现有元素前增加p元素
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;p&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">after</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$现有元素</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//在现有元素之后增加p元素
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;p&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">replaceWith</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$现有元素</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//用p元素替换现有元素
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;p&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">preppendTo</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$父元素</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//在父元素下开头增加p元素
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;p&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">beforeTO</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$现有元素</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//在现有元素前增加p元素
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;p&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">afterTo</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$现有元素</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//在现有元素之后增加p元素
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;p&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">replaceWithTo</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$现有元素</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//用p元素替换现有元素
 </span><span style="color:#8f5902;font-style:italic"></span>
 </code></pre></div><h3 id="删除元素">删除元素</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;span&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">remove</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//删除span元素
@@ -815,6 +826,125 @@ jQuery中一切都是用函数来解决问题  没有属性。</p>
 <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 
 
+</code></pre></div><h2 id="动画">动画</h2>
+<ol>
+<li>
+<p>简单动画:写死的固定 不变的三种动画效果</p>
+<ol>
+<li>
+<p>显示隐藏：<code>.show()</code>、<code>.hide()</code>、<code>.toggle()</code></p>
+<blockquote>
+<p>问题：.show() .hide() 不加参数时,默认使用display:block 和 display:none控制瞬间的显示和隐藏 如果想要有动画效果 必须加持续时间参数。</p>
+</blockquote>
+</li>
+<li>
+<p>上滑下滑：<code>.slideUp()</code>、<code>.slideDown()</code>、<code>.slideToggle()</code></p>
+</li>
+<li>
+<p>淡入淡出：<code>.fadeIn()</code>、<code>.fadeOut()</code>、<code>.fadeToggle()</code></p>
+</li>
+</ol>
+<p><strong>简单的动画所有函数的共享问题：</strong></p>
+<ol>
+<li>效果是写死的 几乎不可维护。</li>
+<li>用Js定时器和DOM操作的模拟动画效率非常低。</li>
+</ol>
+</li>
+<li>
+<p>万能动画</p>
+<blockquote>
+<p>可以对任意<strong>css属性</strong>应用动画效果 主要希望对任意<strong>css属性</strong>应用动画效果时使用 只需要写目标值 可自动获得当前的对应属性值 自动计算变化的距离</p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;#d1&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">animate</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">css属性</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000">目标值</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">持续时间</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//只支持单个数组的css属性 不支持css3动画 不支持颜色过渡。
+</span></code></pre></div></li>
+<li>
+<p>排队和并发</p>
+<ol>
+<li>
+<p>并发执行：多个<strong>css属性</strong>同时变化</p>
+</li>
+<li>
+<p>排队执行：多个<strong>css属性</strong>排队变化</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;#d1&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">animate</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">css属性</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000">目标值</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">持续时间</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">animate</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">css属性</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000">目标值</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">持续时间</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#8f5902;font-style:italic">//动画完了以后执行的回调函数
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//按顺序排队执行
+</span><span style="color:#8f5902;font-style:italic"></span>      
+<span style="color:#8f5902;font-style:italic">//判断元素是否在运行动画
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;#d1&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">is</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;:animated&#39;</span><span style="color:#000;font-weight:bold">)</span> 
+      
+<span style="color:#8f5902;font-style:italic">//停止动画 添加true参数停止所有 不加停止当前动画
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;#d1&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">stop</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">]</span><span style="color:#000;font-weight:bold">)</span>  
+</code></pre></div></li>
+</ol>
+<p>注:<em><strong>animate</strong></em>先加入到队列 然后顺序执行 不是立刻播放的意思</p>
+</li>
+</ol>
+<h3 id="循环和查找位置">循环和查找位置</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;ul&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">each</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">ele</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#000">alert</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ele</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">html</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;ul&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">index</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ele</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#8f5902;font-style:italic">// index 方法 查找位置
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h3 id="添加自定义属性">添加自定义属性</h3>
+<p>拥有独立的html,css,js甚至是数据的可重用页面独立区域。可以代码重用和简化开发。</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">jQuery</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fn</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#000">Jquery</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">prototype</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#8f5902;font-style:italic">//他们是相对的
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">jQuery</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fn</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">sum</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#8f5902;font-style:italic">//自定义sum属性
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">sum</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">each</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">domele</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">sum</span><span style="color:#ce5c00;font-weight:bold">+=</span><span style="color:#204a87">parseFloat</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">domele</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">innerHTML</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">||</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+  <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">sum</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><h3 id="封装自定义插件">封装自定义插件</h3>
+<ol>
+<li>插件的内容，样式和功能应该已经在页面中实现了，只不过，暂时和别的内容混合在一起，没提取出来而已</li>
+<li>封装插件。
+<ol>
+<li>提取css  避免冲突 写插件下严禁的全局选择器。</li>
+<li>向jQuery的原型对象中添加一个新的函数。</li>
+</ol>
+</li>
+</ol>
+<h3 id="jquery-ajax">jQuery Ajax</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">$</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ajax</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#000">url</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#39;地址&#39;</span><span style="color:#000;font-weight:bold">,</span>
+	<span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;get&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#8f5902;font-style:italic">//get post
+</span><span style="color:#8f5902;font-style:italic"></span>	<span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#8f5902;font-style:italic">//传递参数  对象语法
+</span><span style="color:#8f5902;font-style:italic"></span>	<span style="color:#000">dataType</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#39;json&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#8f5902;font-style:italic">//自动转换成json
+</span><span style="color:#8f5902;font-style:italic"></span>	<span style="color:#000">success</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+		<span style="color:#8f5902;font-style:italic">// result 自动获得服务端返回的结果
+</span><span style="color:#8f5902;font-style:italic"></span>	<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+	<span style="color:#000">error</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">err</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#8f5902;font-style:italic">//err 返回错误信息
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div><h4 id="ajax跨域">Ajax跨域</h4>
+<pre><code>Access to XMLHttpRequest at 'http://127.0.0.1:3000/' from origin 'http://127.0.0.1:5000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+//ajax跨域请求会根据同源策略（Cross Origin Resources Shareing）被终止。
+</code></pre><p>一个网站的网页中发送<strong>Ajax</strong>请求另一个网站的api:</p>
+<pre><code>    1. 可以请求成功 也可以获得数据 
+    2.  浏览器会检查响应头(快递单)中的来源地址 如果来源地址和当前网页所在的地址不同则禁止使用该数据并报错
+</code></pre>
+<p>跨域请求包括：</p>
+<ol>
+<li>域名不同: <code>http://www.a.com</code> ajax 请求 <code>http://www.b.com</code>的页面</li>
+<li>子域名不同 <code>http://www.a.com</code> ajax 请求 <code>http://bbs.a.com</code>的页面</li>
+<li>端口不同 <code>http://www.a.com:80</code> ajax 请求 <code>http://www.a.com:8888</code>的页面</li>
+<li>协议不同 <code>http://www.a.com ajax</code> 请求 <code>https://www.a.com</code>的页面</li>
+</ol>
+<blockquote>
+<p><strong>解决方法</strong></p>
+<ol>
+<li>CORS 只需要服务端在返回数据时，在响应头中伪造来源地址，和客户响应头一致。<code>Access-Control-Allow-Origin:'*'</code>  任何地址都可以</li>
+<li>JSONP: 本地创建一个函数，让远端JS调用。</li>
+</ol>
+</blockquote>
+<h4 id="nodejs-解决"><strong>NodeJS 解决</strong></h4>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">npm</span> <span style="color:#000">i</span> <span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">save</span>  <span style="color:#000">cors</span> <span style="color:#8f5902;font-style:italic">//安装cors
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">app</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">js</span>  <span style="color:#8f5902;font-style:italic">//添加中间件函数
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">app</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">use</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">cors</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#000">origin</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#34;http://127.0.0.1:5501&#34;</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 </code></pre></div><h2 id="总结">总结</h2>
 <ol>
 <li>
