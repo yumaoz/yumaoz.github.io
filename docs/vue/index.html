@@ -22,16 +22,16 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Vue | web开发笔记</title><meta property="og:title" content="Vue" />
-<meta property="og:description" content="vue的一些例子
+<meta property="og:description" content="vue的基础学习笔记
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/docs/vue/" />
 <meta property="og:updated_time" content="2020-01-31T18:02:46+08:00" /><meta property="og:site_name" content="web开发笔记" />
 <meta itemprop="name" content="Vue">
-<meta itemprop="description" content="vue的一些例子
+<meta itemprop="description" content="vue的基础学习笔记
 "><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vue"/>
-<meta name="twitter:description" content="vue的一些例子
+<meta name="twitter:description" content="vue的基础学习笔记
 "/>
 
 
@@ -207,6 +207,30 @@ if (!doNotTrack) {
   <ul>
     <li class="collapse show" id="docsvue">
       
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsvuevue_timer" href="/docs/vue/vue_timer/">Vue短信倒计时</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsvuefenye" href="/docs/vue/fenye/">vue分页演示</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsvuevue_model" href="/docs/vue/vue_model/">Vue双向绑定</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsvuevue2dom" href="/docs/vue/vue2dom/">vue底层原理</a>
       
       
     </li>
@@ -414,6 +438,27 @@ if (!doNotTrack) {
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#什么是vue">什么是Vue</a></li>
+        <li><a href="#如何使用vue">如何使用Vue</a></li>
+        <li><a href="#mvvm">MVVM</a></li>
+        <li><a href="#vue对象中包含两大子系统">vue对象中包含两大子系统</a></li>
+        <li><a href="#双花括号">双花括号</a></li>
+        <li><a href="#指令">指令</a></li>
+        <li><a href="#监视函数">监视函数</a></li>
+        <li><a href="#特殊绑定">特殊绑定</a></li>
+        <li><a href="#绑定样式">绑定样式</a></li>
+        <li><a href="#自定义指令">自定义指令</a></li>
+        <li><a href="#计算属性">计算属性</a></li>
+        <li><a href="#过滤器">过滤器</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -445,24 +490,292 @@ if (!doNotTrack) {
             
 <div class="td-content">
 	<h1>Vue</h1>
-	<div class="lead">vue的一些例子</div>
-	<h1 id="vuep-使用">Vuep 使用</h1>
-<p><vuep template="#example"></vuep></p>
-<script v-pre type="text/x-template" id="example">
-  <template>
-    <div>Hello, {{ name }}!</div>
-  </template>
-
-
-  <script>
-    module.exports = {
-      data: function () {
-        return { name: 'Vue' }
-      }
-    }
-  </script>
-<p></script></p>
-
+	<div class="lead">vue的基础学习笔记</div>
+	<h3 id="什么是vue">什么是Vue</h3>
+<p>第三方开发的渐进式的基于MVVM设计模式的纯前端JS框架， 需要第三方下载。</p>
+<ol>
+<li><strong>渐进式</strong>：可逐步在项目中引入Vue的各项功能，且可与其他技术混用  今后极力不推荐混合使用。</li>
+<li>利用<strong>MVVM设计模式</strong>：纯前端没有后端技术，Vue照常运行。</li>
+<li><strong>Js框架</strong>：已具有核心功能的半成品项目代码。开发人员只需要根据具体业务的需求，添加定制自己个性化的那一部分内容。</li>
+</ol>
+<p><strong>所有以数据为主的项目，都可以使用Vue框架</strong></p>
+<h3 id="如何使用vue">如何使用Vue</h3>
+<p><strong>两种下载方式</strong></p>
+<ol>
+<li>用<code>&lt;script&gt;</code>引入现有的vue.js到网页中 <a href="cn.vuejs.org">官方网址</a> 初学者使用,学习单项Vue的技能。</li>
+<li>安装脚手架代码</li>
+</ol>
+<p><strong>例子</strong></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">div</span> <span style="color:#000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;app&#34;</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>
+  <span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">button</span> <span style="color:#a40000">@</span><span style="color:#000">click</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;add&#34;</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000">click</span> <span style="color:#000">me</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">n</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">/</span><span style="color:#a40000">b</span><span style="color:#a40000">u</span><span style="color:#a40000">t</span><span style="color:#a40000">t</span><span style="color:#a40000">o</span><span style="color:#a40000">n</span><span style="color:#a40000">&gt;</span>
+<span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">/</span><span style="color:#a40000">d</span><span style="color:#a40000">i</span><span style="color:#a40000">v</span><span style="color:#a40000">&gt;</span>
+<span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">script</span> <span style="color:#000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;js/vue.js&#34;</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">/</span><span style="color:#a40000">s</span><span style="color:#a40000">c</span><span style="color:#a40000">r</span><span style="color:#a40000">i</span><span style="color:#a40000">p</span><span style="color:#a40000">t</span><span style="color:#a40000">&gt;</span>
+<span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">script</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">n</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">app</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">el</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#app&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#8f5902;font-style:italic">//el要监控内容的父元素的选择器
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">data</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">methods</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#8f5902;font-style:italic">//交互事件函数写在这里
+</span><span style="color:#8f5902;font-style:italic"></span>      <span style="color:#000">add</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">n</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">;</span>
+      <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">/</span><span style="color:#a40000">s</span><span style="color:#a40000">c</span><span style="color:#a40000">r</span><span style="color:#a40000">i</span><span style="color:#a40000">p</span><span style="color:#a40000">t</span><span style="color:#a40000">&gt;</span>
+</code></pre></div><h3 id="mvvm">MVVM</h3>
+<p>现代web前端开发重新划分了三步</p>
+<ol>
+<li>视图/界面（view）:
+<ul>
+<li>HTML+CSS</li>
+<li>增强了HTML和CSS的功能，比如提供了变量、分支、循环等这些程序必备功能</li>
+</ul>
+</li>
+<li>模型数据（Model）:其实就是一个Data对象，统一保存这个界面所需的所有变量。</li>
+<li>控制器（viewModel）：自动失效模型数据data中的内容和界面(view)中的数据实时同步。控制器封装了传统的增删改查功能，所以避免了一切的重复操作。</li>
+</ol>
+<h3 id="vue对象中包含两大子系统">vue对象中包含两大子系统</h3>
+<ol>
+<li>
+<p>响应系统</p>
+<p>实时监控data中的变量变化，自动为每个变量添加了访问器属性，这些访问器属性，直接列属于new Vue()对象 保护/监控data中的变量。而且所有访问器属性的set方法中内置了通知机制，只要视图修改data中的变量值，自然就会触发通知。</p>
+</li>
+<li>
+<p>虚拟DOM树</p>
+<p>Vue内存中仅保存可能变化的Dom元素和可能变化的属性的简化版的dom树。仅包含可能变化的元素和可能变化的属性 遍历块并且已经封装了增删改查的操作。效率高 仅修改可能受影响的元素和可能受影响的属性，多数无关的元素和属性不受影响。</p>
+</li>
+</ol>
+<h5 id="无论是data中的变量还是methods中的函数--只要进入-new-vue直接隶属于new-vue-可以直接使用-this访问">无论是Data中的变量还是methods中的函数  只要进入 new Vue()直接隶属于new Vue 可以直接使用 this.访问</h5>
+<h3 id="双花括号">双花括号</h3>
+<blockquote>
+<p>只要是 合法的有返回值的<strong>js 表达式</strong>都可以放入<strong>双花括号</strong>中，但是不支持 <code>if else</code>  <code>do/while</code> <code>for</code>等循环体</p>
+<p>不能用于绑定html片段 如果使用 会原样显示出来</p>
+</blockquote>
+<h3 id="指令">指令</h3>
+<blockquote>
+<p>为HTML添加增强功能的特殊属性 传统的HTML缺少程序必须的要素,如：<strong>变量、函数、支、循环</strong>等 导致JS重复操作量巨大。</p>
+<p>Vue一共有13个指令</p>
+</blockquote>
+<ol>
+<li>
+<p><code>v-bind  /:</code> 属性绑定</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#8f5902;font-style:italic">&lt;!--</span> <span style="color:#000">属性绑定需要使用v</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">bind</span>  <span style="color:#000">val可以是合法的JS条件表达式</span> <span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">v</span><span style="color:#204a87;font-weight:bold">-bind</span><span style="color:#204a87;font-weight:bold">:id</span><span style="color:#4e9a06">=&#34;val&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#204a87;font-weight:bold">:id</span><span style="color:#4e9a06">=&#34;val&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>  <span style="color:#8f5902;font-style:italic">&lt;!--</span><span style="color:#000">简写</span><span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>
+</code></pre></div></li>
+<li>
+<p><code>v-show</code> 控制显示和隐藏</p>
+<p>每次new Vue扫描带有v-show的元素时，都会动态判断条件。如果条件返回true，就正常显示。如果条件返回false，就自动翻译为display:none，隐藏该元素</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;app&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">pno</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">}</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">pcount</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">}</span> <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">button</span> <span style="color:#204a87;font-weight:bold">v-show</span><span style="color:#4e9a06">=&#34;pno&lt;pcount&#34; @click=&#39;ck&#39;&gt; 下一页&lt;/button&gt;
+</span><span style="color:#4e9a06">&lt;/div&gt;
+</span><span style="color:#4e9a06">&lt;script src=&#34;js/vue.js&#34;</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">vm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">el</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#39;#app&#39;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">pno</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">pcount</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">methods</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">ck</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">pno</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">;</span>
+      <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div></li>
+<li>
+<p>两个元素，二选一显示: <code>v-if / v-else</code> 在扫描时，如果条件为true，就显示<code>v-if</code>的元素，如条件为false，就显示<code>v-else</code>的元素， <code>v-if</code>和<code>v-else</code>两个元素之间禁止插入其他元素。两个元素必须紧邻。</p>
+<ol>
+<li><code>v-show</code>使用<strong>display:none</strong>隐藏元素 —— 效率高</li>
+<li><code>v-if v-else</code>是通过删除元素方式隐藏元素 —— 效率低</li>
+</ol>
+</li>
+<li>
+<p>多个元素，多选一显示: <code>v-if / v-else-if / v-else</code>  同上显示原理。多了几种可能</p>
+</li>
+<li>
+<p>反复生成多个相同结构的元素 <code>v-for  :key </code>  一定有一个数组或者数值和 让你可做参照反复生成的元素内容 可以同时获得内容和下标。强烈建议使用 <code>v-for</code> 必须加 <code>:key</code>  需要绑定到要生成的子元素上。</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span> <span style="color:#204a87;font-weight:bold">v-for</span><span style="color:#4e9a06">=&#34;(item,i) of arr&#34; </span><span style="color:#204a87;font-weight:bold">:key</span><span style="color:#4e9a06">=&#34;i&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">item</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div></li>
+<li>
+<p>绑定函数 <code>v-on /@</code></p>
+<p>如果既需要传参 还需要传递事件对象e  就需要在绑定时 传递 <code>$event</code>   它是Vue中的关键字 代表Dom的事件对象。</p>
+</li>
+<li>
+<p>绑定HTML片段 <code>v-html</code></p>
+<p><code>V-htm</code>是一个指令 需要放在开始标签内。</p>
+</li>
+<li>
+<p><code>v-cloak</code>指令 Vue加载完成之前 可以临时隐藏个别元素，但是需要自己定义 css 样式 适用于隐藏htm片段</p>
+</li>
+<li>
+<p><code>v-text</code>  隐藏内容 但是html片段还在。</p>
+</li>
+<li>
+<p><code>v-once</code> 只在加载时 自动绑定一次。之后 变量改变不会在自动刷新页面。</p>
+</li>
+<li>
+<p><code>v-pre</code>保持内容中的<code>{{}}</code>不被替换。</p>
+</li>
+<li>
+<p><code>v-model</code>双向绑定:</p>
+<p>既能从模型绑定到界面的绑定**(m-&gt;v)** 又能将界面的修改 自动更新到模型中**(v-&gt;m)**</p>
+</li>
+</ol>
+<h3 id="监视函数">监视函数</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">vm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">el</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#39;#app&#39;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">pno</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">pcount</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">methods</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">watch</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">kwords</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#000">alert</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;kwords变化了&#39;</span><span style="color:#000;font-weight:bold">)</span>
+      <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><h3 id="特殊绑定">特殊绑定</h3>
+<ol>
+<li>
+<h5 id="单选按钮绑定">单选按钮绑定</h5>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">input</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;radio&#34;</span> <span style="color:#c4a000">value</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;1&#39;</span> <span style="color:#c4a000">v</span><span style="color:#204a87;font-weight:bold">-model</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#c4a000">checked</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;sex&#39;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000">男</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">input</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;radio&#34;</span> <span style="color:#c4a000">value</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;0&#39;</span> <span style="color:#c4a000">v</span><span style="color:#204a87;font-weight:bold">-model</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#c4a000">checked</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;sex&#39;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000">女</span>
+</code></pre></div></li>
+<li>
+<h5 id="多选按钮单用">多选按钮单用</h5>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">input</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;checkbox&#34;</span> <span style="color:#c4a000">v</span><span style="color:#204a87;font-weight:bold">-model</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#c4a000">checked</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;isAgree&#39;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000">同意</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">button</span> <span style="color:#204a87;font-weight:bold">:disabled</span><span style="color:#4e9a06">=&#34;!isAgree&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000">提交</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">button</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div></li>
+<li>
+<h5 id="单选列表">单选列表</h5>
+<ul>
+<li>每一项的<strong>value</strong>都写死在每个<code>&lt;option&gt;</code>上 所以 <code>v-model</code> 一定不会写在每个 <code>option</code>上</li>
+<li>选中项改变时，改变的是value属性值，所以 <code>v-model</code>应该写在 <code>select</code>的 <strong>value</strong>上</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">select</span> <span style="color:#c4a000">v</span><span style="color:#204a87;font-weight:bold">-model</span><span style="color:#204a87;font-weight:bold">:value</span><span style="color:#4e9a06">=&#34;city&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">option</span> <span style="color:#c4a000">value</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;bj&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000">北京</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">option</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">option</span> <span style="color:#c4a000">value</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;sh&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000">上海</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">option</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">option</span> <span style="color:#c4a000">value</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;nj&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000">南京</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">option</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">option</span> <span style="color:#c4a000">value</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;ly&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000">洛阳</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">option</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">selecct</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div></li>
+</ol>
+<blockquote>
+<p><strong>v-model在不同的属性上 绑定的属性也不一样。所以后期使用都可以直接使用 <code>v-model='变量名'</code></strong></p>
+</blockquote>
+<h3 id="绑定样式">绑定样式</h3>
+<ol>
+<li>
+<p>可以通过对象方式传递 <code>style</code>和 <code>:style</code>可以共存 系统最终会合并。</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;pop&#34;</span> <span style="color:#c4a000">style</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;color:#fff&#39;</span> <span style="color:#204a87;font-weight:bold">:style</span><span style="color:#4e9a06">=&#34;popStyle&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">vm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">el</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#app&#34;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#000">popStyle</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span>
+          <span style="color:#000">width</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#34;250px&#34;</span><span style="color:#000;font-weight:bold">,</span>
+          <span style="color:#000">hight</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#34;300px&#34;</span>
+        <span style="color:#000;font-weight:bold">}</span>
+      <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div></li>
+<li>
+<p>通过字符串传递</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;pop&#34;</span> <span style="color:#c4a000">style</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;color:#fff&#39;</span> <span style="color:#204a87;font-weight:bold">:style</span><span style="color:#4e9a06">=&#34;popStyle&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">vm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">el</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#app&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#000">popStyle</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#34;width:250px;hight:300px;&#34;</span><span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div></li>
+<li>
+<p>绑定class</p>
+<ul>
+<li>
+<p>将整个class作为一个大的字符串绑定 不便于操作其他一个class</p>
+</li>
+<li>
+<p>将 class 属性看做一个对象结构绑定。</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#204a87;font-weight:bold">:class</span><span style="color:#4e9a06">=&#34;abc&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">vm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">el</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#app&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#000">abc</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">abc</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>  <span style="color:#8f5902;font-style:italic">//根据布尔值判断是否启用
+</span><span style="color:#8f5902;font-style:italic"></span>      <span style="color:#000">def</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#000">active</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">true</span>
+    <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>  
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="自定义指令">自定义指令</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">directive</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;abc&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#000">inserted</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">domElem</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+          <span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">domElem</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+        <span style="color:#000;font-weight:bold">}</span>
+      <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#8f5902;font-style:italic">//使用的时候 在元素里加: v-abc
+</span></code></pre></div><h3 id="计算属性">计算属性</h3>
+<p>不实际保存属性值，仅通过其他属性计算获得。定义时时一个函数 使用时和变量一样</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">vm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">el</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#app&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#000">abc</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">abc</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>  <span style="color:#8f5902;font-style:italic">//根据布尔值判断是否启用
+</span><span style="color:#8f5902;font-style:italic"></span>      <span style="color:#000">def</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#000">active</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">true</span>
+    <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">n</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">arr</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000;font-weight:bold">]</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">methods</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">send</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#8f5902;font-style:italic">//发送
+</span><span style="color:#8f5902;font-style:italic"></span>      <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">watch</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">Ò</span>
+      <span style="color:#8f5902;font-style:italic">//n 发送变化时监听执行
+</span><span style="color:#8f5902;font-style:italic"></span>      <span style="color:#000">n</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">n</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+      <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">computed</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">total</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#8f5902;font-style:italic">//filter 数组过滤  reduce 输出计算
+</span><span style="color:#8f5902;font-style:italic"></span>        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">item</span><span style="color:#000;font-weight:bold">=&gt;</span><span style="color:#000">item</span><span style="color:#ce5c00;font-weight:bold">&gt;=</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">reduce</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">pre</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">item</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">=&gt;</span><span style="color:#000">pre</span><span style="color:#ce5c00;font-weight:bold">+</span><span style="color:#000">item</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+      <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>  
+</code></pre></div><blockquote>
+<p><strong>methods</strong>中的函数 反复调用几次，就需要重复计算几次,如果反复使用效率低</p>
+<p><strong>computed</strong>中的计算属性 值首次使用时计算。效率高</p>
+</blockquote>
+<h3 id="过滤器">过滤器</h3>
+<p>专门对原始类型的值进行加工后显示的函数  只要原始属性必须加工才显示就需要使用到过滤器</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;app&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">p</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000">性别</span><span style="color:#a40000">：</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">sex</span> <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#000">sexFilter</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">p</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;../js/vue.js&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;sexFilter&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">value</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">value</span><span style="color:#ce5c00;font-weight:bold">==</span><span style="color:#4e9a06">&#39;0&#39;</span> <span style="color:#ce5c00;font-weight:bold">?</span> <span style="color:#4e9a06">&#39;女&#39;</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#39;男&#39;</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">vm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">el</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#app&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">sex</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div>
         <div class="section-index">
     
     
@@ -473,7 +786,43 @@ if (!doNotTrack) {
             
         
             
+                <div class="entry">
+                    <h5>
+                        <a href="/docs/vue/vue_timer/">Vue短信倒计时</a>
+                    </h5>
+                    <p>短信倒计时的vue实现案例</p>
+                </div>
+            
         
+            
+        
+            
+        
+            
+                <div class="entry">
+                    <h5>
+                        <a href="/docs/vue/fenye/">vue分页演示</a>
+                    </h5>
+                    <p>vue实现简单分页</p>
+                </div>
+            
+        
+            
+                <div class="entry">
+                    <h5>
+                        <a href="/docs/vue/vue_model/">Vue双向绑定</a>
+                    </h5>
+                    <p>Vue模型双向绑定的实现</p>
+                </div>
+            
+        
+            
+                <div class="entry">
+                    <h5>
+                        <a href="/docs/vue/vue2dom/">vue底层原理</a>
+                    </h5>
+                    <p>使用Dom实现Vue的底层原理</p>
+                </div>
             
         
             
