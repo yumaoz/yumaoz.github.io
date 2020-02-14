@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="cn" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.64.0" />
+
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>HTML5core | web开发笔记</title><meta property="og:title" content="HTML5core" />
+<meta property="og:description" content="HTML5的一些新特性" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/html/core/" />
+<meta property="article:published_time" content="2020-02-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-10T00:00:00+00:00" /><meta property="og:site_name" content="web开发笔记" />
+<meta itemprop="name" content="HTML5core">
+<meta itemprop="description" content="HTML5的一些新特性">
+<meta itemprop="datePublished" content="2020-02-10T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-10T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="556">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HTML5core"/>
+<meta name="twitter:description" content="HTML5的一些新特性"/>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-00000000-0', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.fa767430755364e8f49e24a61b82e97248c9e4b5171e1fb01c1af2ff0d3559da.css" as="style">
+<link href="/scss/main.min.fa767430755364e8f49e24a61b82e97248c9e4b5171e1fb01c1af2ff0d3559da.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+    <title>HTML5core | web开发笔记</title>
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zM197.0804 232.033c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zM197.0839 232.0372c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zM197.0839 232.0372c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zM197.0804 177.6188c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zM197.0839 177.623c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zM197.0839 177.623c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zM197.5309 286.4723c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zM197.5344 286.4765c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zM197.5344 286.4765c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zM197.0804 340.5784c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zM197.0839 340.5826c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zM197.0839 340.5826c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="text-uppercase font-weight-bold">web开发笔记</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/docs/" ><span class="active">Docs</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/notes/" ><span>Notes</span></a>
+			</li>
+			
+			
+			
+			<li class="nav-item dropdown d-none d-lg-block">
+				
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	中文
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/en/">English</a>
+	
+</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+<input type="search" class="form-control td-search-input" placeholder="&#xf002 搜索全站" aria-label="搜索全站" autocomplete="off">
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+<input type="search" class="form-control td-search-input" placeholder="&#xf002 搜索全站" aria-label="搜索全站" autocomplete="off">
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    
+    <div class="nav-item dropdown d-block d-lg-none">
+      
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	中文
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/en/">English</a>
+	
+</div>
+    </div>
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Docs</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/wechat/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Wechat</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docswechat">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/git/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Git</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsgit">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/vue/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Vue</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsvue">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsvuemintui" href="/docs/vue/mintui/">mintUi</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsvuevue_todo" href="/docs/vue/vue_todo/">vue实现todolist</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsvuevue_timer" href="/docs/vue/vue_timer/">Vue短信倒计时</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsvuefenye" href="/docs/vue/fenye/">vue分页演示</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsvuevue_model" href="/docs/vue/vue_model/">Vue双向绑定</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsvuevue2dom" href="/docs/vue/vue2dom/">vue底层原理</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/jquery/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">JQuery</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsjquery">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dom/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Dom</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdom">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/html/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Html</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docshtml">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docshtmlcanvas_game" href="/docs/html/canvas_game/">大鱼吃小鱼游戏</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docshtmlsvgicon" href="/docs/html/svgicon/">svg 画图标</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docshtmlsvg30" href="/docs/html/svg30/">svg制作30个随机圆形</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docshtmlcanvas" href="/docs/html/canvas/">canvas 绘图示例</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docshtmlcore" href="/docs/html/core/">HTML5core</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docshtmlecharts" href="/docs/html/echarts/">Echarts教程</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/nodejs/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Nodejs</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsnodejs">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/jsbase/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Jsbase</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsjsbase">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsjsbasessqex" href="/docs/jsbase/ssqex/">双色球随机练习</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/markdown/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Markdown</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsmarkdown">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/mysql/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Mysql基础</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsmysql">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+
+
+
+
+
+<a href="https://github.com/yumaoz/docs/edit/master/content/cn/docs/Html/core.md" target="_blank"><i class="fa fa-edit fa-fw"></i> 编辑此页</a>
+<a href="https://github.com/yumaoz/docs/issues/new?title=HTML5core" target="_blank"><i class="fab fa-github fa-fw"></i> 创建文章 issue</a>
+
+
+<a href="https://github.com/yumaoz/docs/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> 创建项目 issue</a>
+
+</div>
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#html5">HTML5</a></li>
+        <li><a href="#websocket重点">webSocket(重点)</a></li>
+        <li><a href="#webstroage">webStroage</a></li>
+        <li><a href="#网页游戏">网页游戏</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/">Docs</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/html/">Html</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/docs/html/core/">HTML5core</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>HTML5core</h1>
+	<div class="lead">HTML5的一些新特性</div>
+	<h3 id="html5">HTML5</h3>
+<p>W3C组件 2014年推出的一组网页中技术总称</p>
+<h4 id="视频">视频</h4>
+<ol>
+<li>
+<p>视频文件格式 .mp4 .flv .webm .ogg</p>
+</li>
+<li>
+<p>解码器：如果浏览器播放指定格式视频需要安装 此种格式视频对应解码器软件 浏览器安装了大部分视频格式解码器。</p>
+<p>标准语法</p>
+<ol>
+<li><em>controls</em> 显示播放原生控件（兼容性查）</li>
+<li>loop 循环播放</li>
+<li>muted 静音播放</li>
+<li>preload 预加载策略
+<ol>
+<li>none 不加载任何数据</li>
+<li>metadata 只预加载元数据</li>
+<li>auto 加载元数据且加载一部分时长的视频（默认）</li>
+</ol>
+</li>
+<li>poster 在播放视频之前显示一张图片(广告) 如果视频暂停广告不再显示</li>
+</ol>
+<p><strong>JS常见属性方法</strong> 必须通过js程序获取视频对象</p>
+<ol>
+<li>volume: 音量（0~1）</li>
+<li>playbackRate: 播放速率 大于1快放 小于1 慢放</li>
+<li>play() 播放视频</li>
+<li>pause() 暂停播放</li>
+<li>paused 表示当前视频播放状态 true表示暂停 false表示正在播放。</li>
+</ol>
+<p><strong>video事件</strong></p>
+<ol>
+<li>canplaythrough 当视频加载结束后可以播放时触发事件(一次)</li>
+<li>duration 视频时长(秒)</li>
+<li>ended 当视频播放结束后触发(一次)</li>
+<li>timeupdate ship  视频正在播放中(多次) 4/s</li>
+<li>currentTime 当前播放时间点。</li>
+</ol>
+<p><strong>video与图片的专用样式 object-fit</strong></p>
+<ol>
+<li><code>fill</code>  拉伸 默认值</li>
+<li><code>contain</code> 包含</li>
+<li><code>cover</code> 覆盖</li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">video</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;文件路径&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>你的浏览器版本太低，请升级<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">video</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#8f5902;font-style:italic">&lt;!--</span><span style="color:#8f5902;font-style:italic">属性</span><span style="color:#8f5902;font-style:italic">--&gt;</span>
+</code></pre></div><p>兼容语法</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">video</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">source</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;x.mp4&#34;</span> <span style="color:#000;font-weight:bold">/</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">source</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;x.flv&#34;</span> <span style="color:#000;font-weight:bold">/</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">source</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;x.webm&#34;</span> <span style="color:#000;font-weight:bold">/</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">video</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div></li>
+</ol>
+<h4 id="绘图">绘图</h4>
+<p>将复杂数据转换图形直观的展示给用户。</p>
+<p>绘图三种技术</p>
+<ol>
+<li>
+<p>svg 用户线段组建图形 针对2D矢量图 可以无限方法和所需不失真 颜色单</p>
+<table>
+<thead>
+<tr>
+<th>绘图类型</th>
+<th>2D位图</th>
+<th>2D矢量图</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>如何绘制</td>
+<td>使用js代码</td>
+<td>标签</td>
+</tr>
+<tr>
+<td>事件绑定</td>
+<td>只能绑定在画布</td>
+<td>每个图形都可绑定事件</td>
+</tr>
+<tr>
+<td>应用场景</td>
+<td>网页特性、游戏</td>
+<td>地图</td>
+</tr>
+</tbody>
+</table>
+<p>创建画布标签，添加圆环标签</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">svg</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;s3&#34;</span> <span style="color:#c4a000">width</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;500&#34;</span> <span style="color:#c4a000">height</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;400&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#8f5902;font-style:italic">&lt;!--</span><span style="color:#8f5902;font-style:italic"> cx/cy圆心坐标 fill 填充颜色 r 半径 stroke 描边</span><span style="color:#8f5902;font-style:italic">--&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">circle</span>
+          <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;c3&#34;</span>
+          <span style="color:#c4a000">cx</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;250&#34;</span> 
+          <span style="color:#c4a000">cy</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;200&#34;</span> 
+          <span style="color:#c4a000">r</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;10&#34;</span>   
+          <span style="color:#c4a000">fill</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#00f&#34;</span>
+          <span style="color:#c4a000">fill-opacity</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;0.2&#34;</span>
+          <span style="color:#c4a000">stroke</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#f00&#34;</span>
+          <span style="color:#c4a000">stroke-opacity</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;0.3&#34;</span>
+          <span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">circle</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">svg</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><ol>
+<li>
+<p><strong>js操作svg画布</strong></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">svg</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;svg&#34;</span> <span style="color:#c4a000">width</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;500&#34;</span> <span style="color:#c4a000">height</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;300&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">svg</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#8f5902;font-style:italic">// 获取画布
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">svg</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">document</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">getElementById</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;svg&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#8f5902;font-style:italic">// 创建圆环元素
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">c</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">document</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">createElementNS</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;http://www.w3.org/2000/svg&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;circle&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#8f5902;font-style:italic">// 添加属性
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">c</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">setAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;cx&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">50</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000">c</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">setAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;cy&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">50</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000">c</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">setAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;r&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">50</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000">c</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">setAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;fill&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;red&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#8f5902;font-style:italic">// 添加到画布
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">svg</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">appendChild</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">c</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#8f5902;font-style:italic">// 单击事件
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">c</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">onclick</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#8f5902;font-style:italic">// 获取半径
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">r</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">getAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;r&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">setAttribute</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;r&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">r</span> <span style="color:#ce5c00;font-weight:bold">*=</span> <span style="color:#0000cf;font-weight:bold">1.02</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p><strong>svg线性元素</strong></p>
+<blockquote>
+<p>x1/y1 开始坐标 x2,y2 结束坐标  stroke 颜色 storke-width 宽度 stroke-linecap 顶角样式 round 表示圆</p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">svg</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;svg&#34;</span> <span style="color:#c4a000">width</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;500&#34;</span> <span style="color:#a40000">,</span><span style="color:#c4a000">height</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;500&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">line</span>
+        <span style="color:#c4a000">x1</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;100&#34;</span>
+        <span style="color:#c4a000">y1</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;200&#34;</span>
+        <span style="color:#c4a000">x2</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;250&#34;</span>
+        <span style="color:#a40000">,</span><span style="color:#c4a000">y2</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;250&#34;</span>
+        <span style="color:#c4a000">stroke</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;red&#34;</span>
+        <span style="color:#c4a000">stroke-width</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;5&#34;</span>
+        <span style="color:#c4a000">stroke-linecap</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;round&#39;</span>
+        <span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">line</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">svg</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p><strong>折线</strong></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">svg</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;svg&#34;</span><span style="color:#c4a000">width</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;500&#39;</span> <span style="color:#c4a000">height</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;500&#39;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#8f5902;font-style:italic">&lt;!--</span><span style="color:#8f5902;font-style:italic"> 折线 五角星 </span><span style="color:#8f5902;font-style:italic">--&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">polyline</span>
+   <span style="color:#c4a000">points</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;80,100 280,100 120,200 175,20 250,200 80,100&#34;</span>
+   <span style="color:#c4a000">fill</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;#eee&#39;</span> <span style="color:#c4a000">stroke-width</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;2&#39;</span> <span style="color:#c4a000">stroke</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;red&#39;</span>
+            <span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">polyline</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">svg</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG">svg手册</a></p>
+</li>
+</ol>
+</li>
+<li>
+<p>webgl  3D位图</p>
+</li>
+<li>
+<p>canvas   用像素点组建图形 针对2D位图 不可以方法和缩小且会失真 颜色细腻</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">canvas</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;c3&#39;</span> <span style="color:#c4a000">width</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;500&#34;</span> <span style="color:#c4a000">height</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;500 &#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">canvas</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#8f5902;font-style:italic">// 获取画布
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">cs</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">document</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">getElementById</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;c3&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#8f5902;font-style:italic">// 画布上下文对象  画笔
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">ctx</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">c3</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">getContext</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;2d&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#8f5902;font-style:italic">// 设置空心样式
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">strokeStyle</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;red&#39;</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#8f5902;font-style:italic">// 绘制空心矩形
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">strokeRect</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">x</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">y</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">w</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">h</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#8f5902;font-style:italic">// 设置实心样式
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fillStyle</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;red&#39;</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#8f5902;font-style:italic">// 绘制实心矩形
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fillRect</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">x</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">y</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">w</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">h</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#8f5902;font-style:italic">// 绘制文本
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fillStyle</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;#000&#39;</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">textBaseline</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;top&#39;</span>
+  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fillText</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">el</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">shop</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">x</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">500</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">y</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+   
+  <span style="color:#8f5902;font-style:italic">//绘制不规则图形
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">beginPath</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//开始一条心路径
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">moveTo</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">x</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">y</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//移动到指定点
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">lineTo</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">x</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">y</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//从当前点到自定点绘制一条直线
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">stroke</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//描边
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fill</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//填充
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">closePath</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//闭合一条路径
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">arc</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">cx</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">cy</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">r</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">start</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">end</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//绘制一条圆拱形 cx/cy圆心 r半径 start 开始角度 end 结束角度 角度使用弧度。90度*Math.Pi/180 =弧度。
+</span><span style="color:#8f5902;font-style:italic"></span>   
+  <span style="color:#8f5902;font-style:italic">// 绘制图像
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">p3</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Image</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000">p3</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">src</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;src/res/p3.png&#34;</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000">p3</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">onload</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">rotate</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">15</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#204a87">Math</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">PI</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#0000cf;font-weight:bold">180</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#8f5902;font-style:italic">//旋转图片
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">drawImage</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">p3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">200</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">200</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000">ctx</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">translate</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">x</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">y</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//移动原点
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">save</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//保存画笔状态 原点角度颜色
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">restore</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">//恢复到画笔保存状态
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><blockquote>
+<p>**注：**宽度和高度一定要用js或者属性添加 不能使用css定义</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="拖动和释放html5">拖动和释放（HTML5）</h4>
+<ol>
+<li>PC项目 拖动上传图片</li>
+<li>移动端项目  自拍/相册</li>
+</ol>
+<p><strong>拖动源对象 触发三个事件</strong></p>
+<ol>
+<li><code>dragstart</code> 拖动开始</li>
+<li><code>drag</code>  拖动中</li>
+<li><code>dragend</code> 拖动结束</li>
+</ol>
+<p>整个过程：dragstart +drag*n + dragend</p>
+<p>拖动目标对象 触发四个事件</p>
+<ol>
+<li>
+<p><code>dragenter</code> 拖动进入</p>
+</li>
+<li>
+<p><code>dragover</code>   拖动悬停 默认事件会影响拖动释放  需要先阻止默认行为</p>
+<p><code>event.preventDefault(); //阻止默认事件</code></p>
+</li>
+<li>
+<p><code>dragleave </code> 拖动离开</p>
+</li>
+<li>
+<p><code>drop </code> 拖动释放</p>
+</li>
+</ol>
+<p>移动端项目  自拍/相册</p>
+<h4 id="web-worker">Web Worker</h4>
+<p><strong>程序</strong>：可以被CPU执行代码 程序存储在磁盘上</p>
+<p><strong>进程</strong>：将程序调用内存中并且分配指定空间，在内存中的程序称为进程</p>
+<p><strong>线程</strong>：进程内部是有多个线程组件==（内存）==</p>
+<p><strong>Chrome</strong>:一个Chrome浏览器进程内部至少有6个线程负责专项服务。</p>
+<pre><code>1. ***请求线程***： 发送请求 获取资源。
+2. ***UI主线程***：负责绘制所有资源并且执行js 程序 
+</code></pre>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8f5902;font-style:italic">// 创建新进程执行js 不影响Ui绘制界面
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">w</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Worker</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;js/05.js&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div><p>接收与数据</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">w</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">postMessage</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;发送给Worker&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000">w</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">onmessage</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">event</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;event&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">event</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">data</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><blockquote>
+<p><strong>注意事项</strong>：Worker中执行的代码不能包含DOM/BOM元素  操作DOM/BOM只能交给Ui主线程。 其他线程不能操作 以免造成混乱。</p>
+</blockquote>
+<h3 id="websocket重点">webSocket(重点)</h3>
+<ol>
+<li><code>HTTP</code>：超文本传输协议 用来传输网页中的资源（html/css/image/video&hellip;）<em><strong>请求/响应</strong></em>。一次请求对应一次响应，如果没有请求就没有响应。</li>
+<li><code>websocket</code>：解决了数据实时响应问题。 工作方式 <em><strong>广播和收听</strong></em></li>
+</ol>
+<h4 id="使用方法">使用方法</h4>
+<ol>
+<li>
+<p><strong>服务器端</strong>： <code>node.js / scoket.io</code>  简单方便</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8f5902;font-style:italic">// 创建Web服务器
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">app</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;http&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">createServer</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+   
+<span style="color:#8f5902;font-style:italic">// 监听端口
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">app</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">listen</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">3001</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#8f5902;font-style:italic">// 创建socket.io对象
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">io</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;socket.io&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">app</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+   
+<span style="color:#8f5902;font-style:italic">// 接收客户端请求
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">io</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">on</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;connection&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">client</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;有客户端连接到服务器&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#8f5902;font-style:italic">// socket 为当前客户创建专属服务。
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">on</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;message&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">data</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;data :&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">data</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">t</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">setInterval</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">emit</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;server&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;发送给客户端&#34;</span><span style="color:#ce5c00;font-weight:bold">+</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">clearInterval</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">t</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">500</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+     
+  <span style="color:#8f5902;font-style:italic">//io 调用emit 表示 广播 所有客户端都可以接收到
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">io</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">emit</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;news&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;明天统一打八折&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+     
+  <span style="color:#8f5902;font-style:italic">// 客户端离开事件。
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">on</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;disconnect&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">data</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">`</span><span style="color:#4e9a06">客户端离开 :</span><span style="color:#4e9a06">${</span><span style="color:#000">data</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">`</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+   
+</code></pre></div></li>
+<li>
+<p><strong>客户端</strong>：浏览器原生对象 功能较少 第三方 <code>scoket.io</code></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">ws</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">io</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;ws://127.0.0.1:3001&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000">ws</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">on</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;server&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">data</span><span style="color:#000;font-weight:bold">=&gt;</span><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;data :&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">data</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000">ws</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">emit</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;message&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#4e9a06">&#39;你好北京&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div></li>
+</ol>
+<h3 id="webstroage">webStroage</h3>
+<p>在客户端浏览器中保存用户专有的数据  保存：登录用户的昵称 购物车等。</p>
+<table>
+<thead>
+<tr>
+<th align="left">客户端存储</th>
+<th align="left">服务器端存储</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">不安全 存储量小</td>
+<td align="left">海量存储。数据安全</td>
+</tr>
+<tr>
+<td align="left">cookie 兼容性好 缺点L操作复杂</td>
+<td align="left">数据库</td>
+</tr>
+<tr>
+<td align="left">flash 缺点 依赖flash播放器</td>
+<td align="left">session 对象</td>
+</tr>
+<tr>
+<td align="left">Webstorage 操作简单8MB 兼容性查</td>
+<td align="left">文件</td>
+</tr>
+<tr>
+<td align="left">indexDB 不标准</td>
+<td align="left">内存数据库 文档数据库</td>
+</tr>
+</tbody>
+</table>
+<p>WebStorage 存储数据依赖两个对象</p>
+<ol>
+<li><code>sessionStorage</code> 对象存储范围在当前会话中 当前会话中所有网页都可以使用 <em>sessionStorage</em> 但是如果会话结束后 数据丢失。</li>
+<li><code>LocalStorage</code>  此对象保存数据永久保存</li>
+</ol>
+<h4 id="操作方法">操作方法</h4>
+<ol>
+<li>保存数据  <code>setitem(key,value)</code> 键值对</li>
+<li>获取数据  <code>getitem(key)</code> 通过键获取数值</li>
+<li>删除指定数据 <code>removeitem(key)</code> 删除key键指定的数据</li>
+<li>清空所有数据 <code>clear()</code> 清空</li>
+<li>数据长度 <code>length</code></li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8f5902;font-style:italic">// 存储数据
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">sessionStorage</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">setItem</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;name&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#4e9a06">&#39;马云老师&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000">localStorage</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">setItem</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;abc&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#4e9a06">&#39;我爱我的国家&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#8f5902;font-style:italic">// 获取长度
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;length :&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">sessionStorage</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">length</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;length :&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">localStorage</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">length</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#8f5902;font-style:italic">// 获取列表
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;name :&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">sessionStorage</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">getItem</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;name&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;abc :&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">localStorage</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">getItem</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;abc&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div><h3 id="网页游戏">网页游戏</h3>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">最后修改 2020-02-10
+</div>
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2020 yumaoz All Rights Reserved</small>
+        <small class="ml-1"><a href="https://yumaoz.github.io" target="_blank">隐私政策</a></small>
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+
+
+
+  </body>
+</html>

@@ -7,7 +7,6 @@
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
-<link rel="alternate" type="application/rss&#43;xml" href="/docs/index.xml">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -21,15 +20,36 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Docs | web开发笔记</title><meta property="og:title" content="Docs" />
-<meta property="og:description" content="web开发笔记" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/docs/" />
-<meta property="og:updated_time" content="2020-01-31T18:02:38+08:00" /><meta property="og:site_name" content="web开发笔记" />
-<meta itemprop="name" content="Docs">
-<meta itemprop="description" content="web开发笔记"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Docs"/>
-<meta name="twitter:description" content="web开发笔记"/>
+<title>Echarts教程 | web开发笔记</title><meta property="og:title" content="Echarts教程" />
+<meta property="og:description" content="外观精美 功能多  ECharts，一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari等），底层依赖矢量图形库 ZRender，提供直观，交互丰富，可高度个性化定制的数据可视化图表。
+  创建容器对象main
+  根据容器对象main来创建echart对象
+  指定图表的配置项和数据
+  使用刚指定的配置项和数据显示图表
+// 基于准备好的dom，初始化echarts实例 var myChart = echarts.init(document.getElementById(&#34;main&#34;)); var list=[ {name:&#39;文化路店&#39;,sale:87220}, {name:&#39;解放路店&#39;,sale:17130}, {name:&#39;天津路店&#39;,sale:31860}, {name:&#39;北京路店&#39;,sale:57690}, {name:&#39;上海路店&#39;,sale:18290}, ]; // 指定图表的配置项和数据 var option = { title: { text: &#34;ECharts 入门示例&#34; }, tooltip: {}, legend: { data: [&#34;销量&#34;] }, xAxis: { data: list.reduce((p,e)=&gt;p.concat(e.name),[]) }, yAxis: {}, series: [ { name: &#34;销量&#34;, type: &#34;bar&#34;, data: list." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/html/echarts/" />
+<meta property="og:site_name" content="web开发笔记" />
+<meta itemprop="name" content="Echarts教程">
+<meta itemprop="description" content="外观精美 功能多  ECharts，一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari等），底层依赖矢量图形库 ZRender，提供直观，交互丰富，可高度个性化定制的数据可视化图表。
+  创建容器对象main
+  根据容器对象main来创建echart对象
+  指定图表的配置项和数据
+  使用刚指定的配置项和数据显示图表
+// 基于准备好的dom，初始化echarts实例 var myChart = echarts.init(document.getElementById(&#34;main&#34;)); var list=[ {name:&#39;文化路店&#39;,sale:87220}, {name:&#39;解放路店&#39;,sale:17130}, {name:&#39;天津路店&#39;,sale:31860}, {name:&#39;北京路店&#39;,sale:57690}, {name:&#39;上海路店&#39;,sale:18290}, ]; // 指定图表的配置项和数据 var option = { title: { text: &#34;ECharts 入门示例&#34; }, tooltip: {}, legend: { data: [&#34;销量&#34;] }, xAxis: { data: list.reduce((p,e)=&gt;p.concat(e.name),[]) }, yAxis: {}, series: [ { name: &#34;销量&#34;, type: &#34;bar&#34;, data: list.">
+
+<meta itemprop="wordCount" content="80">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Echarts教程"/>
+<meta name="twitter:description" content="外观精美 功能多  ECharts，一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari等），底层依赖矢量图形库 ZRender，提供直观，交互丰富，可高度个性化定制的数据可视化图表。
+  创建容器对象main
+  根据容器对象main来创建echart对象
+  指定图表的配置项和数据
+  使用刚指定的配置项和数据显示图表
+// 基于准备好的dom，初始化echarts实例 var myChart = echarts.init(document.getElementById(&#34;main&#34;)); var list=[ {name:&#39;文化路店&#39;,sale:87220}, {name:&#39;解放路店&#39;,sale:17130}, {name:&#39;天津路店&#39;,sale:31860}, {name:&#39;北京路店&#39;,sale:57690}, {name:&#39;上海路店&#39;,sale:18290}, ]; // 指定图表的配置项和数据 var option = { title: { text: &#34;ECharts 入门示例&#34; }, tooltip: {}, legend: { data: [&#34;销量&#34;] }, xAxis: { data: list.reduce((p,e)=&gt;p.concat(e.name),[]) }, yAxis: {}, series: [ { name: &#34;销量&#34;, type: &#34;bar&#34;, data: list."/>
 
 
 <script type="application/javascript">
@@ -58,9 +78,9 @@ if (!doNotTrack) {
   crossorigin="anonymous"></script>
 
 
-    <title>Docs | web开发笔记</title>
+    <title>Echarts教程 | web开发笔记</title>
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -101,7 +121,7 @@ if (!doNotTrack) {
 </a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="/en/docs/">English</a>
+	<a class="dropdown-item" href="/en/">English</a>
 	
 </div>
 			</li>
@@ -145,7 +165,7 @@ if (!doNotTrack) {
 </a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="/en/docs/">English</a>
+	<a class="dropdown-item" href="/en/">English</a>
 	
 </div>
     </div>
@@ -159,7 +179,7 @@ if (!doNotTrack) {
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Docs</a>
+    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Docs</a>
   </li>
   <ul>
     <li class="collapse show" id="docs">
@@ -176,10 +196,10 @@ if (!doNotTrack) {
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/wechat/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Wechat</a>
+    <a  href="/docs/wechat/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Wechat</a>
   </li>
   <ul>
-    <li class="collapse show" id="docswechat">
+    <li class="collapse " id="docswechat">
       
       
       
@@ -199,10 +219,10 @@ if (!doNotTrack) {
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/git/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Git</a>
+    <a  href="/docs/git/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Git</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsgit">
+    <li class="collapse " id="docsgit">
       
       
       
@@ -222,10 +242,10 @@ if (!doNotTrack) {
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/vue/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Vue</a>
+    <a  href="/docs/vue/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Vue</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsvue">
+    <li class="collapse " id="docsvue">
       
       
       
@@ -281,10 +301,10 @@ if (!doNotTrack) {
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/jquery/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">JQuery</a>
+    <a  href="/docs/jquery/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">JQuery</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsjquery">
+    <li class="collapse " id="docsjquery">
       
       
       
@@ -304,10 +324,10 @@ if (!doNotTrack) {
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/dom/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Dom</a>
+    <a  href="/docs/dom/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Dom</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsdom">
+    <li class="collapse " id="docsdom">
       
       
       
@@ -327,7 +347,7 @@ if (!doNotTrack) {
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/html/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Html</a>
+    <a  href="/docs/html/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Html</a>
   </li>
   <ul>
     <li class="collapse show" id="docshtml">
@@ -367,7 +387,7 @@ if (!doNotTrack) {
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docshtmlecharts" href="/docs/html/echarts/">Echarts教程</a>
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docshtmlecharts" href="/docs/html/echarts/">Echarts教程</a>
       
       
     </li>
@@ -386,10 +406,10 @@ if (!doNotTrack) {
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/nodejs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Nodejs</a>
+    <a  href="/docs/nodejs/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Nodejs</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsnodejs">
+    <li class="collapse " id="docsnodejs">
       
       
       
@@ -409,10 +429,10 @@ if (!doNotTrack) {
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/jsbase/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Jsbase</a>
+    <a  href="/docs/jsbase/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Jsbase</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsjsbase">
+    <li class="collapse " id="docsjsbase">
       
       
       
@@ -438,10 +458,10 @@ if (!doNotTrack) {
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/markdown/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Markdown</a>
+    <a  href="/docs/markdown/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Markdown</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsmarkdown">
+    <li class="collapse " id="docsmarkdown">
       
       
       
@@ -461,10 +481,10 @@ if (!doNotTrack) {
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/mysql/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Mysql基础</a>
+    <a  href="/docs/mysql/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Mysql基础</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsmysql">
+    <li class="collapse " id="docsmysql">
       
       
       
@@ -499,8 +519,8 @@ if (!doNotTrack) {
 
 
 
-<a href="https://github.com/yumaoz/docs/edit/master/content/cn/docs/_index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> 编辑此页</a>
-<a href="https://github.com/yumaoz/docs/issues/new?title=Docs" target="_blank"><i class="fab fa-github fa-fw"></i> 创建文章 issue</a>
+<a href="https://github.com/yumaoz/docs/edit/master/content/cn/docs/Html/echarts.md" target="_blank"><i class="fa fa-edit fa-fw"></i> 编辑此页</a>
+<a href="https://github.com/yumaoz/docs/issues/new?title=Echarts%e6%95%99%e7%a8%8b" target="_blank"><i class="fab fa-github fa-fw"></i> 创建文章 issue</a>
 
 
 <a href="https://github.com/yumaoz/docs/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> 创建项目 issue</a>
@@ -523,8 +543,28 @@ if (!doNotTrack) {
 
 
 
-<li class="breadcrumb-item active" aria-current="page">
+
+
+
+
+
+
+<li class="breadcrumb-item" >
 	<a href="/docs/">Docs</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/html/">Html</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/docs/html/echarts/">Echarts教程</a>
 </li>
 
 	</ol>
@@ -532,145 +572,71 @@ if (!doNotTrack) {
 
             
 <div class="td-content">
-	<h1>Docs</h1>
+	<h1>Echarts教程</h1>
 	
-	<blockquote>
-<p>在学习前端过程中所记录的笔记.</p>
-</blockquote>
-
-        <div class="section-index">
-    
-    
-    
-    
-    <hr class="panel-line">
-        
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/wechat/">Wechat</a>
-                    </h5>
-                    <p>微信开发技巧</p>
-                </div>
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/git/">Git</a>
-                    </h5>
-                    <p>Git 简易教程</p>
-                </div>
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/vue/">Vue</a>
-                    </h5>
-                    <p>vue的基础学习笔记</p>
-                </div>
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/jquery/">JQuery</a>
-                    </h5>
-                    <p>jQuery 是第三方开发的执行Dom操作的极简化的函数库。</p>
-                </div>
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/dom/">Dom</a>
-                    </h5>
-                    <p>DOM的一些操作。</p>
-                </div>
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/html/">Html</a>
-                    </h5>
-                    <p>html的一些常见笔记。</p>
-                </div>
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/nodejs/">Nodejs</a>
-                    </h5>
-                    <p>Nodejs学习笔记，一些常见三方库的使用方法</p>
-                </div>
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/jsbase/">Jsbase</a>
-                    </h5>
-                    <p>javaScript基础笔记。</p>
-                </div>
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/markdown/">Markdown</a>
-                    </h5>
-                    <p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-                </div>
-            
-        
-            
-        
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/mysql/">Mysql基础</a>
-                    </h5>
-                    <p>Mysql 常用命令记录</p>
-                </div>
-            
-        
-            
-        
-    
-</div>
+	<ol>
+<li>外观精美</li>
+<li>功能多</li>
+</ol>
+<p>ECharts，一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari等），底层依赖矢量图形库 <a href="https://github.com/ecomfe/zrender">ZRender</a>，提供直观，交互丰富，可高度个性化定制的数据可视化图表。</p>
+<ol>
+<li>
+<p>创建容器对象main</p>
+</li>
+<li>
+<p>根据容器对象main来创建echart对象</p>
+</li>
+<li>
+<p>指定图表的配置项和数据</p>
+</li>
+<li>
+<p>使用刚指定的配置项和数据显示图表</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8f5902;font-style:italic">// 基于准备好的dom，初始化echarts实例
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">myChart</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">echarts</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">init</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">document</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">getElementById</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;main&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+   
+<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">list</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">[</span>
+  <span style="color:#000;font-weight:bold">{</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#39;文化路店&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">sale</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">87220</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000;font-weight:bold">{</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#39;解放路店&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">sale</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">17130</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000;font-weight:bold">{</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#39;天津路店&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">sale</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">31860</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000;font-weight:bold">{</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#39;北京路店&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">sale</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">57690</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000;font-weight:bold">{</span><span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">&#39;上海路店&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">sale</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">18290</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span>
+   
+<span style="color:#8f5902;font-style:italic">// 指定图表的配置项和数据
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">option</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#000">title</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">text</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ECharts 入门示例&#34;</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000">tooltip</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000">legend</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;销量&#34;</span><span style="color:#000;font-weight:bold">]</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000">xAxis</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">list</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">reduce</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">p</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">e</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">=&gt;</span><span style="color:#000">p</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">concat</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">name</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000;font-weight:bold">]</span><span style="color:#000;font-weight:bold">)</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000">yAxis</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000">series</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">name</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;销量&#34;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;bar&#34;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">list</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">reduce</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">p</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">e</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000">p</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">concat</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">sale</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000;font-weight:bold">]</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">]</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
+   
+<span style="color:#8f5902;font-style:italic">// 使用刚指定的配置项和数据显示图表。
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">myChart</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">setOption</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">option</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div><p>series 数据源</p>
+<p>type： bar 柱状图 pie 饼图  gauge 仪表图。</p>
+</li>
+</ol>
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">最后修改 2020-01-31
+	<div class="text-muted mt-5 pt-3 border-top">最后修改 0001-01-01
 </div>
 </div>
+
 
           </main>
         </div>

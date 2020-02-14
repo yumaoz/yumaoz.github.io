@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.63.2" />
+<meta name="generator" content="Hugo 0.64.0" />
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -179,6 +179,29 @@ if (!doNotTrack) {
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/wechat/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Wechat</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docswechat">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/git/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Git</a>
   </li>
   <ul>
@@ -207,6 +230,18 @@ if (!doNotTrack) {
   <ul>
     <li class="collapse show" id="docsvue">
       
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsvuemintui" href="/docs/vue/mintui/">mintUi</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsvuevue_todo" href="/docs/vue/vue_todo/">vue实现todolist</a>
       
       
       
@@ -302,6 +337,42 @@ if (!doNotTrack) {
       
       
       
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docshtmlcanvas_game" href="/docs/html/canvas_game/">大鱼吃小鱼游戏</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docshtmlsvgicon" href="/docs/html/svgicon/">svg 画图标</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docshtmlsvg30" href="/docs/html/svg30/">svg制作30个随机圆形</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docshtmlcanvas" href="/docs/html/canvas/">canvas 绘图示例</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docshtmlcore" href="/docs/html/core/">HTML5core</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docshtmlecharts" href="/docs/html/echarts/">Echarts教程</a>
+      
+      
     </li>
   </ul>
 </ul>
@@ -346,6 +417,12 @@ if (!doNotTrack) {
   <ul>
     <li class="collapse " id="docsjsbase">
       
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsjsbasessqex" href="/docs/jsbase/ssqex/">双色球随机练习</a>
       
       
     </li>
@@ -454,6 +531,17 @@ if (!doNotTrack) {
         <li><a href="#自定义指令">自定义指令</a></li>
         <li><a href="#计算属性">计算属性</a></li>
         <li><a href="#过滤器">过滤器</a></li>
+        <li><a href="#axios函数库">Axios函数库</a></li>
+        <li><a href="#组件component">组件(Component)</a></li>
+        <li><a href="#组件化开发">组件化开发</a></li>
+        <li><a href="#vue-spa单页面应用">Vue SPA(单页面应用)</a></li>
+        <li><a href="#单页应用实现">单页应用实现</a></li>
+        <li><a href="#路由传参">路由传参</a></li>
+        <li><a href="#脚手架">脚手架</a></li>
+        <li><a href="#脚手架的项目结构">脚手架的项目结构</a></li>
+        <li><a href="#vue文件">(.vue)文件</a></li>
+        <li><a href="#vue生命周期">Vue生命周期</a></li>
+        <li><a href="#vuex">Vuex</a></li>
       </ul>
     </li>
   </ul>
@@ -550,7 +638,7 @@ if (!doNotTrack) {
 <h3 id="双花括号">双花括号</h3>
 <blockquote>
 <p>只要是 合法的有返回值的<strong>js 表达式</strong>都可以放入<strong>双花括号</strong>中，但是不支持 <code>if else</code>  <code>do/while</code> <code>for</code>等循环体</p>
-<p>不能用于绑定html片段 如果使用 会原样显示出来</p>
+<p>不能用于绑定html片段 如果使用 会原样显示出来 不能在双花括号里修改变量 否则会造成死循环</p>
 </blockquote>
 <h3 id="指令">指令</h3>
 <blockquote>
@@ -775,6 +863,301 @@ if (!doNotTrack) {
     <span style="color:#000;font-weight:bold">}</span>
   <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p>==过滤器可以传参， 第一个是实参值，就写在实参列表的第一个位置，调用时形参成会自动传给后一个实参==</p>
+<p>多个过滤器可以连用，后一个过滤器收到的是前一个过滤器处理过的值。</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;app&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">p</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000">性别</span><span style="color:#a40000">：</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">sex</span><span style="color:#ce5c00;font-weight:bold">|</span><span style="color:#000">sexFilter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;en&#39;</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">|</span><span style="color:#000">sexIcon</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">p</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;../js/vue.js&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;sexFilter&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">value</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">lang</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;cn&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">lang</span><span style="color:#ce5c00;font-weight:bold">==</span><span style="color:#4e9a06">&#39;cn&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">value</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#39;0&#39;</span> <span style="color:#ce5c00;font-weight:bold">?</span> <span style="color:#4e9a06">&#39;女&#39;</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;男&#39;</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span><span style="color:#204a87;font-weight:bold">else</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">value</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#39;0&#39;</span> <span style="color:#ce5c00;font-weight:bold">?</span> <span style="color:#4e9a06">&#39;Female&#39;</span> <span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;Male&#39;</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+    
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span>
+  <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;sexIcon&#39;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">value</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">value</span><span style="color:#ce5c00;font-weight:bold">==</span><span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#ce5c00;font-weight:bold">||</span> <span style="color:#000">value</span><span style="color:#ce5c00;font-weight:bold">==</span><span style="color:#4e9a06">&#39;男&#39;</span> <span style="color:#ce5c00;font-weight:bold">||</span> <span style="color:#000">value</span><span style="color:#ce5c00;font-weight:bold">==</span><span style="color:#4e9a06">&#39;Male&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#4e9a06">&#39;male.png&#39;</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span><span style="color:#204a87;font-weight:bold">else</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#4e9a06">&#39;female.png&#39;</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">vm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">el</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#app&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">sex</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><h3 id="axios函数库">Axios函数库</h3>
+<p><strong>axios</strong>是一个第三方独立的函数库，并不仅仅局限于vue中。</p>
+<ol>
+<li>
+<p>发送get请求</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">axios</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">get</span><span style="color:#000;font-weight:bold">(</span>
+ <span style="color:#4e9a06">&#39;服务器地址&#39;</span><span style="color:#000;font-weight:bold">,</span>
+ <span style="color:#000;font-weight:bold">{</span>
+     <span style="color:#000">params</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">a</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#000">n</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">2</span>
+    <span style="color:#000;font-weight:bold">}</span>
+ <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">then</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">=&gt;</span><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">data</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div></li>
+<li>
+<p>发送post请求</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">axios</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">post</span><span style="color:#000;font-weight:bold">(</span>
+ <span style="color:#4e9a06">&#39;服务器地址&#39;</span><span style="color:#000;font-weight:bold">,</span>
+ <span style="color:#000;font-weight:bold">{</span>
+     <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">a</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#000">n</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">2</span>
+    <span style="color:#000;font-weight:bold">}</span>
+ <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">then</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">=&gt;</span><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">data</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div><h3 id="组件component">组件(Component)</h3>
+<p>只要发现一个功能区域需要反复使用，都要先封装为组件。 每个组件内都是一个完整的小社会。</p>
+<p>Vue在扫描真实Dom树的时候，发现组件标签 会在Vue家里找到组件标签同名的组件类型 代替界面中组件标签的位置   创建一个专属的data{}对象 专属专用互不干涉。</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#8f5902;font-style:italic">&lt;!--</span> <span style="color:#000">引用组件</span> <span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">my</span><span style="color:#204a87;font-weight:bold">-counter</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">/</span><span style="color:#a40000">m</span><span style="color:#a40000">y</span><span style="color:#a40000">-</span><span style="color:#a40000">c</span><span style="color:#a40000">o</span><span style="color:#a40000">u</span><span style="color:#a40000">n</span><span style="color:#a40000">t</span><span style="color:#a40000">e</span><span style="color:#a40000">r</span><span style="color:#a40000">&gt;</span><span style="color:#a40000"> </span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#8f5902;font-style:italic">// 创建一个组件 组件名称不适用驼峰 不区分大小写。
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">component</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;my-counter&#34;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#000">template</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">`</span><span style="color:#4e9a06">&lt;span&gt;
+</span><span style="color:#4e9a06">    &lt;button @click=&#34;change(-1)&#34;&gt;-&lt;/button&gt;
+</span><span style="color:#4e9a06">    &lt;span&gt;{{n}}&lt;/span&gt;
+</span><span style="color:#4e9a06">    &lt;button @click=&#34;change(+1)&#34;&gt;+&lt;/button&gt;
+</span><span style="color:#4e9a06">  &lt;/span&gt;</span><span style="color:#4e9a06">`</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000">data</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">n</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">0</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000">methods</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">change</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">n</span><span style="color:#ce5c00;font-weight:bold">+=</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">;</span>
+      <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">n</span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">0</span> <span style="color:#a40000">&amp;</span><span style="color:#a40000">&amp;</span> <span style="color:#a40000">(</span><span style="color:#c4a000">this.n</span><span style="color:#a40000">=</span><span style="color:#c4a000">0</span><span style="color:#a40000">)</span><span style="color:#a40000">;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">)</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><h4 id="组件分类">组件分类</h4>
+<ol>
+<li><strong>根组件</strong> 全局注册的组件  可以在任何页面的任何位置使用 没有限制。</li>
+<li><strong>子组件</strong> 注册在局部的组件 和全局一样建立成组件对象 且子组件的对象名必须使用驼峰命名 为父组件创建 components:{子组件对象名1,子组件2} 定义的时候使用驼峰命名 页面使用的时候使用横线 <code>todoList</code> -&gt; <code>&lt;todo-list&gt;</code></li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">el</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;#app&#39;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">components</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">App</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">LayoutHeader</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><h3 id="组件化开发">组件化开发</h3>
+<ol>
+<li>组件间传参：
+<ol>
+<li>父组件传参给子组件 父组件中的成员 子组件没入嗯不允许随意访问 因为，每个数组中的数据，归当前组件专属独有。父组件设置：<code>&lt;子组件 :tasks=&quot;tasks&quot;&gt;/&lt;子组件&gt;</code>  子组件通过 <code>props:['tasks']</code>接收。 Props用法给data中的自建变量完全一样。</li>
+<li>子组件传参给父组件</li>
+<li>兄弟间传参</li>
+</ol>
+</li>
+</ol>
+<h3 id="vue-spa单页面应用">Vue SPA(单页面应用)</h3>
+<p>一个应用程序中 只有一个完整的HTML页面，其他所谓的页面 其实都是一些较大的组件而已。所谓的页面跳转实际是更换不同的组件。</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left">多页面</th>
+<th>单页面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">请求次数</td>
+<td align="left">每切换一次页面，一定会重新向服务器发送一次请求。——请求次数多</td>
+<td>只在首次就把所有组件一次性加载到客户端，之后即使切换&quot;页面&rdquo;，也只是在客户端本地切换组件而已，无需重复向服务器发送请求——请求次数少</td>
+</tr>
+<tr>
+<td align="center">页面加载效率</td>
+<td align="left">每切换一次页面，都要重建整棵DOM树——效率低</td>
+<td>只在第一次记载时创建整课DOM树，之后切换&quot;页面&rdquo;，只是局部更新DOM树的内容。——效率高</td>
+</tr>
+<tr>
+<td align="center">共享资源</td>
+<td align="left">每个页面都要重新引用共享的资源文件（jQuery, bootstrap, Qs, axios。。。）,只要切换页面，就要重新从服务器下载共享资源文件。——请求次数多</td>
+<td>资源文件只在唯一完整的HTML文件上引用一次。之后每次切换页面，不需要重新从服务器下载共享资源文件。——请求次数少</td>
+</tr>
+<tr>
+<td align="center">页面切换动画</td>
+<td align="left">不可能实现页面切换动画。因为两个页面不可能同时存在于浏览器同一个窗口中，所以不可能实现页面过渡动画。</td>
+<td>容易实现两个&quot;页面&quot;间切换的过渡动画效果。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="单页应用实现">单页应用实现</h3>
+<p>创建一个唯一完整的HTML页面。必须包含vue</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;app&#34;</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+     	
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">router</span><span style="color:#204a87;font-weight:bold">-view</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#a40000">/</span><span style="color:#a40000">r</span><span style="color:#a40000">o</span><span style="color:#a40000">u</span><span style="color:#a40000">t</span><span style="color:#a40000">e</span><span style="color:#a40000">r</span><span style="color:#a40000">-</span><span style="color:#a40000">v</span><span style="color:#a40000">i</span><span style="color:#a40000">e</span><span style="color:#a40000">w</span><span style="color:#a40000">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">index</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">template</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">`</span><span style="color:#4e9a06">&lt;div&gt;&lt;h1&gt;主页&lt;/h1&gt;&lt;/div&gt;</span><span style="color:#4e9a06">`</span>
+  <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">login</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">template</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#4e9a06">`</span><span style="color:#4e9a06">&lt;h1&gt;登录&lt;/h1&gt;</span><span style="color:#4e9a06">`</span>
+  <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#8f5902;font-style:italic">//创建路由列表
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">routes</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;/&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">component</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">index</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;/index&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">component</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">index</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;/login&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">component</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">login</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;/*&#34;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#000">component</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#000">template</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">`</span><span style="color:#4e9a06">&lt;h2&gt;404:Not Found&lt;/h2&gt;</span><span style="color:#4e9a06">`</span>
+      <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#8f5902;font-style:italic">//创建路由器
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">router</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">VueRouter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span> <span style="color:#000">routes</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">vm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">el</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#app&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">router</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p>Vue 使用 <code>&lt;router-link to='/index'&gt;文本&lt;/router-link&gt;</code> 代替a标签。</p>
+<h3 id="路由传参">路由传参</h3>
+<ol>
+<li>
+<p>在路由定义数组里提前声明</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold"></span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">routes</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span>
+    <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;/&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">component</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">index</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">path</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;/index:lid&#34;</span><span style="color:#000;font-weight:bold">,</span>  <span style="color:#8f5902;font-style:italic">//定义参数
+</span><span style="color:#8f5902;font-style:italic"></span>     <span style="color:#000">component</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">index</span><span style="color:#000;font-weight:bold">,</span>
+     <span style="color:#000">props</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">true</span> <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span>
+  <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">vm</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">el</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;#app&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">router</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">props</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">lid</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#8f5902;font-style:italic">//接收路由传参
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div></li>
+</ol>
+<h3 id="脚手架">脚手架</h3>
+<p>已经包含标准项目文件夹结构和核心功能代码的半成品项目</p>
+<ol>
+<li>简化开发</li>
+<li>标准化开发</li>
+</ol>
+<p>几乎所有项目的创建都建议使用脚手架代码。 比如 nodejs express、vue 微信小程序、ng、react。日后 每学一项新技术 首先要去找脚手架代码。</p>
+<p>安装生成脚手架的工具：<code>Vue-cli</code> 安装命令：<code>npm i -g @vue/cli</code></p>
+<h3 id="脚手架的项目结构">脚手架的项目结构</h3>
+<ol>
+<li><strong>public 文件夹</strong>：不需要编译和打包的文件 包括<code>index.html</code> 图片文件夹 第三方已经压缩过的通用库</li>
+<li>src文件夹 一切我们编写的内容都要放在src文件夹下 包括
+<ol>
+<li><code>页面组件</code>、都要放在views文件夹下</li>
+<li><code>全局组件</code>、都要放在 components文件夹下</li>
+<li>自己编写的公共的css和js库都要放在 assets下。</li>
+</ol>
+</li>
+<li>router文件夹 保存 <strong>路由器定义</strong></li>
+<li>App.vue 相当于之前的<code>&lt;div id='app'&gt;</code></li>
+<li>main.js  new Vue入口文件。</li>
+</ol>
+<h3 id="vue文件">(.vue)文件</h3>
+<p>一个 <code>.vue</code>文件就是一个组件，要创建一个组件就需要新建一个<code>.vue</code>文件,每个vue文件中，都包含3样东西</p>
+<ol>
+<li><code>&lt;template&gt;html内容&lt;/template&gt;</code></li>
+<li>组件对象的js  <code>export default {}</code> 每个组件都是一个模块对象 定义好以后都要用 <code>export default {...}</code> 抛出 使用组件需要先引 <code>import 变量 from &quot;路径/组件.vue&quot;</code></li>
+<li>Css</li>
+</ol>
+<h3 id="vue生命周期">Vue生命周期</h3>
+<ol>
+<li><strong>创建:</strong>  前 <code>beforCreate()</code> 、后 <code>created()</code></li>
+</ol>
+</li>
+<li>
+<p><strong>挂载:</strong>  前 <code>beforeMount()</code>、后 <code>mounted()</code></p>
+<ol start="3">
+<li><strong>更新:</strong> 前 <code>beforeUpdate()</code> 后 <code>updated()</code></li>
+</ol>
+</li>
+<li>
+<p><strong>销毁:</strong> 前 <code>beforeDestroy()</code>、后 <code>destroyed()</code></p>
+</li>
+</ol>
+<h3 id="vuex">Vuex</h3>
+<ol>
+<li><code>state</code>保存共享数据</li>
+<li><code>mutations</code>保存函数用于修改共享数据</li>
+<li><code>getters</code> 保存函数用于获取共享数据</li>
+<li><code>action</code> 保存函数异步修改数据 等待数据加载成功后,异步修改数据</li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8f5902;font-style:italic">//引入
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">Vuex</span> <span style="color:#000">from</span> <span style="color:#4e9a06">&#34;vuex&#34;</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#8f5902;font-style:italic">//定义store
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">store</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vuex</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Store</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#000">state</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">count</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">age</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">99</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000">mutations</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">increment</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">state</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">state</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">count</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">clearAge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">state</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">state</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">age</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000">getters</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">count</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">state</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">state</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">count</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000">actions</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">modifyAge</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">context</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#000">setTimeout</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000">context</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">commit</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;clearAge&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">1000</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span> <span style="color:#8f5902;font-style:italic">//异步修改
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Vue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#000">store</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#8f5902;font-style:italic">//载入vue
+</span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#000">render</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">h</span> <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000">h</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">App</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">$mount</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;#app&#34;</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#8f5902;font-style:italic">// .vue
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">export</span> <span style="color:#204a87;font-weight:bold">default</span> <span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#000">computed</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">count</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">$store</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">commit</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;increment&#34;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#8f5902;font-style:italic">//可以调用赋值函数
+</span><span style="color:#8f5902;font-style:italic"></span>      <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">$store</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">state</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">count</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#000">methods</span><span style="color:#ce5c00;font-weight:bold">:</span><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">clearAge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">$store</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">dispatch</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;modifyAge&#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span><span style="color:#000;font-weight:bold">;</span>
 </code></pre></div>
         <div class="section-index">
     
@@ -783,6 +1166,36 @@ if (!doNotTrack) {
     
     <hr class="panel-line">
         
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <div class="entry">
+                    <h5>
+                        <a href="/docs/vue/mintui/">mintUi</a>
+                    </h5>
+                    <p>MintUi在Vue中的使用</p>
+                </div>
+            
+        
+            
+                <div class="entry">
+                    <h5>
+                        <a href="/docs/vue/vue_todo/">vue实现todolist</a>
+                    </h5>
+                    <p>利用Vue实现一个简单的任务列表</p>
+                </div>
             
         
             
@@ -823,6 +1236,10 @@ if (!doNotTrack) {
                     </h5>
                     <p>使用Dom实现Vue的底层原理</p>
                 </div>
+            
+        
+            
+        
             
         
             
